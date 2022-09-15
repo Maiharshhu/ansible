@@ -1,0 +1,28 @@
+---
+- hosts: all
+  tasks:
+  - name: i want to install apache2 webserver
+    apt:
+      name: apache2
+      state: present
+    when: ansible_os_family=="Debian"
+
+  - name: i want to start webserver
+    service:
+      name: apache2
+      state: started
+    when: ansible_os_family=="Debian"
+
+  - name: i want to install webserver on redhat
+    yum:
+      name: httpd
+      state: present
+    when: ansible_os_family=="Redhat"
+  
+  - name: i want to start webserver on redhat
+    service:
+      name: httpd
+      state: started
+    when: ansible_os_family=="Redhat"
+
+

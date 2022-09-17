@@ -3,8 +3,8 @@
 - hosts: 172.31.20.58
   become: yes
   tasks:
-  -  name: I want to Create a empty file4
-     file: 
-     path: /home/ubuntu/mytextfile
-     state: touch
+  - name: I want to Create a empty file4
+    file: 
+      path: /home/ubuntu/mytextfile
+      state: touch
 

@@ -3,7 +3,7 @@
 - hosts: 172.30.20.58
   become: yes
   tasks:
-  -  name: i want to Create a new directory
-     file:
-     path: /home/ubuntu/myfolder
-     state: directory
+  - name: i want to Create a new directory
+    file:
+      path: /home/ubuntu/myfolder
+      state: directory

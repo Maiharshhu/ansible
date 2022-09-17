@@ -1,0 +1,20 @@
+---
+- hosts: 172.31.20.58
+  become: yes
+  tasks:
+  - name: I want to install tree software
+    apt:
+      name: tree
+      state: present
+    
+  - name: i want to install wget software
+    apt:
+      name: wget
+      statee: present
+    # ignore_errors: yes
+
+
+  - name: i want to intall git
+    apt:
+      name: git
+      state: present

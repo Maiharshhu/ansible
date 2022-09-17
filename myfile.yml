@@ -1,9 +1,15 @@
 # Create a empty file in master server using ansible by writing a playbook 
 ---
-- hosts:
+- hosts: 172.31.20.58
   become: yes
   tasks:
   -  name: I want to Create a empty file4
      file: 
      path: /home/ubuntu/mytextfile
      state: touch
+
+# crate a directory/folder using ansible by writing playbook
+  # -  name: i want to Create a new directory
+  #    file:
+  #    path: /home/ubuntu/myfolder
+  #    state: directory

@@ -1,0 +1,9 @@
+# Create a empty file in master server using ansible by writing a playbook 
+---
+- hosts:
+  become: yes
+  tasks:
+  -  name: I want to Create a empty file4
+     file: 
+     path: /home/ubuntu/mytextfile
+     state: touch

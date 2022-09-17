@@ -1,0 +1,6 @@
+# include another yml file in this yml file
+---
+- hosts: 172.31.20.58 
+  become: yes
+  tasks:
+  - include_task: myfile.yml 

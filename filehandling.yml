@@ -33,3 +33,11 @@
       dest: /home/ubuntu/mahaLogin.war
       force_basic_auth: yes
 
+# restart webserver 
+  handlers:
+  - name: Restart apache2 webserver
+    service:
+      name: apache2
+      state: restarted
+
+ 

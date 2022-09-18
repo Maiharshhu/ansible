@@ -1,4 +1,35 @@
 ---
-- hosts: all
+- hosts: 172.31.20.58
   become: yes
-  
+  tasks:
+  - name: i want to Create a new directory(folder)
+    file:
+      path: /home/ubuntu/myfolder
+      state: directory
+
+# for copying file master server to node
+
+  - name: I want to copy file from master to node
+    copy: 
+      src: Readme.md
+      dest: /home/ubuntu/Readme.md
+
+# for installing apache2 webserver
+  - name: i want to install apache2 webserver
+    apt:
+      name: apache2
+      state: present
+
+#changing default apache2 webpage content 
+  - name: copying dynamic files in node side
+    template:
+      src: myindex.j2
+      dest: /var/www/html/index.html
+
+# downloading remote file and save into node
+  - name:
+    get_url:
+      url: https://maha22aug22.s3.us-east-2.amazonaws.com/mahaLogin.war 
+      dest: /home/ubuntu/mahaLogin.war
+      force_basic_auth: yes
+

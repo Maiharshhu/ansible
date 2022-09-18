@@ -1,17 +1,1 @@
-[mywebservers]
 172.31.20.58
-
-
-[Myapplicationserver]
-
-
-
-[myDBserver]
-
-
-
-[mywebserver:vers]
-mywebpackonubuntu=apache2
-mywebpackonredhat=httpd
-javapackonubuntu=openjdk-8-jre
-javapackonredhat=java-1.8.0-openjdk

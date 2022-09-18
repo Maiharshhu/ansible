@@ -1,0 +1,6 @@
+---
+- hosts: 172.31.20.58
+  become: yes
+  tasks:
+  - mywebrole
+  

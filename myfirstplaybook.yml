@@ -1,7 +1,9 @@
 ---
-- hosts: all
-  tasks: 
+- hosts: 172.31.20.58
+  become: yes
+  tasks:
   - name: i want to install apache 2 webserver
     apt:
       name: apache2
       state: present
+
